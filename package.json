@@ -1,0 +1,7 @@
+{
+	"name": "atlas",
+	"version": "0.1.0",
+	"main": "index.js",
+	"author": "LesPantsFancy <mjnrock@umich.edu>",
+	"license": "MIT"
+}

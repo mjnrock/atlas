@@ -1,0 +1,64 @@
+{
+	"name": "mapski",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@codemirror/lang-javascript": "^6.1.9",
+		"@headlessui/react": "^1.7.16",
+		"@lespantsfancy/chord": "0.2.5",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^13.0.0",
+		"@testing-library/user-event": "^13.2.1",
+		"@uiw/react-codemirror": "^4.21.9",
+		"alea": "^1.0.1",
+		"chance": "^1.1.11",
+		"crypto-js": "^4.1.1",
+		"is-base64": "^1.1.0",
+		"matter-js": "^0.19.0",
+		"pixi.js": "^7.2.4",
+		"react": "^18.2.0",
+		"react-color": "^2.19.3",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.9.0",
+		"react-router-dom": "^6.11.2",
+		"react-scripts": "5.0.1",
+		"simplex-noise": "^4.0.1",
+		"tailwindcss": "^3.3.2",
+		"uuid": "^9.0.0",
+		"web-vitals": "^2.1.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"rules": {
+			"react-hooks/exhaustive-deps": "off",
+			"import/no-anonymous-default-export": "off",
+			"no-unused-vars": "off",
+			"no-eval": "off",
+			"array-callback-return": "off",
+			"react/jsx-pascal-case": "off",
+			"no-loop-func": "off",
+			"no-empty-pattern": "off"
+		}
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
