@@ -25,9 +25,18 @@ const SearchBox = ({ search, setSearch, ...props }) => (
 	</div>
 );
 
+const newTerrainDefaults = () => ({
+	type: "NEW_TERRAIN",
+	cost: 1,
+	mask: 0,
+	texture: "#000000",
+});
+
 export function TerrainMap({ data, update, ...props }) {
 	const [ search, setSearch ] = useState("");
 	const [ isModalOpen, setIsModalOpen ] = useState(false);
+	const [ modalTerrain, setModalTerrain ] = useState(newTerrainDefaults());
+
 	const terrains = Object.keys(data.terrains).filter(key => {
 		const terrain = data.terrains[ key ];
 		//NOTE: Add any additional search criteria here
@@ -40,7 +49,10 @@ export function TerrainMap({ data, update, ...props }) {
 				<>
 					<div
 						className="flex flex-row items-center justify-center w-1/6 p-2 border border-transparent border-solid rounded cursor-pointer text-neutral-500 hover:bg-sky-50 hover:text-sky-500 hover:border-sky-200"
-						onClick={ () => setIsModalOpen(true) }
+						onClick={ () => {
+							setIsModalOpen(true);
+							setModalTerrain(newTerrainDefaults());
+						} }
 					>
 						<BsPlusCircleDotted className="text-2xl" />
 					</div>
@@ -53,12 +65,7 @@ export function TerrainMap({ data, update, ...props }) {
 								data: terrain
 							});
 						} }
-						terrain={ {
-							type: "NEW_TERRAIN",
-							cost: 1,
-							mask: 0,
-							texture: "#000000",
-						} }
+						terrain={ modalTerrain }
 					/>
 				</>
 				<div
@@ -97,6 +104,10 @@ export function TerrainMap({ data, update, ...props }) {
 										type: "selectTerrain",
 										data: key
 									});
+								} }
+								onDoubleClick={ () => {
+									setIsModalOpen(true);
+									setModalTerrain({ ...terrain });
 								} }
 							>
 								<TerrainPreview
