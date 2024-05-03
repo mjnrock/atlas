@@ -40,8 +40,6 @@ export const Reducers = ({ } = {}) => ({
 
 		const size = next.cadence.steps.length;
 		let stepDuration = Helpers.getStepDuration(next, next.step);
-
-		console.log(stepDuration)
 		
 		while(next.elapsed >= stepDuration) {
 			next.elapsed -= stepDuration;

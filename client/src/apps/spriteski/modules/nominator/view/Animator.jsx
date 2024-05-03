@@ -19,11 +19,11 @@ const timer = Timer.State({
 	}),
 	duration: 50,
 });
-console.log(timer)
-console.log(Timer.Reducers().tick(timer, 83))
-console.log(Timer.Reducers().tick(timer, 135))
-console.log(Timer.Reducers().tick(timer, 190))
-console.log(Timer.Reducers().tick(timer, 300))
+// console.log(timer)
+// console.log(Timer.Reducers().tick(timer, 83))
+// console.log(Timer.Reducers().tick(timer, 135))
+// console.log(Timer.Reducers().tick(timer, 190))
+// console.log(Timer.Reducers().tick(timer, 300))
 
 export function Tessellator({ data, update, ...props }) {
 	const { tessellatorData, nominatorData } = data;
