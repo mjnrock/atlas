@@ -268,6 +268,12 @@ export const Reducers = {
 		},
 		push: (state, data) => {
 			const { history, index } = state;
+
+			/* check if the current state is the same as the last state */
+			if(history[ index ] && JSON.stringify(history[ index ].state) === JSON.stringify(data.state)) {
+				return state;
+			}
+
 			const next = {
 				...state,
 				history: [

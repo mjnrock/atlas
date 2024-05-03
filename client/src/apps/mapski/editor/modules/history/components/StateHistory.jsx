@@ -179,11 +179,11 @@ export function StateHistory({ data, update, direction = "horizontal" }) {
 									<div className="flex flex-row items-center justify-center gap-4">
 										<div className="flex flex-col items-center justify-center p-1 italic font-thin border border-solid rounded shadow-sm">
 											<TileMapPreview data={ { map: mapData, terrain: terrainData } } />
-											Current
+											Base
 										</div>
 										<div className="flex flex-col items-center justify-center p-1 font-semibold border border-solid rounded shadow-md">
 											<TileMapPreview data={ { map: selectedState, terrain: terrainData } } />
-											Selected
+											Compare
 										</div>
 										<div className="flex flex-col items-center justify-center p-1 italic font-thin border border-solid rounded shadow-sm">
 											{ deltaState && <TileMapPreview data={ { map: deltaState, terrain: terrainData } } /> }
