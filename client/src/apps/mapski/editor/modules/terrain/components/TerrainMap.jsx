@@ -73,7 +73,7 @@ export function TerrainMap({ data, update, ...props }) {
 					} }
 				/>
 				<div
-					className="flex flex-row items-center justify-center w-5/6 p-2 border border-solid rounded cursor-pointer text-neutral-500 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-200"
+					className={`flex flex-row items-center justify-center w-5/6 p-2 border border-solid rounded cursor-pointer text-neutral-500 hover:text-sky-500 hover:bg-sky-50 hover:border-sky-200 ` + (data.selected === null ? "border-sky-300 bg-sky-100 text-sky-400" : "border-transparent")}
 					onClick={ () => {
 						update({
 							type: "selectTerrain",
